@@ -10,15 +10,13 @@ public class Aplicacion {
 	        int minLongitud = n + 1;
 	        int contador = 0;
 
-	            while (suma <= x && der < n) { //O(N)
-	                while (der < n) { //O(N)
+	            while (suma <= x && der < n) { //O(N elevado a 2)
 	                der++;
 	                suma += almacenamiento[der-1];
 	                if (suma >= x && der-izq < minLongitud) { //O(1)
 	                    minLongitud = der-izq;//O(1)
 	                    contador = minLongitud; //O(1)
 	                }
-	            }
 
 	            while (suma > x && izq < n) {
 	                minLongitud = Math.min(minLongitud, der - izq);
